@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
 	hijack_boot_stop \
 	hijack-boot.zip
 
+PRODUCT_COPY_FILES += \
+	device/motorola/hijack/hijack-boot.zip:system/etc/hijack-boot.zip
+
 ifeq ($(BOARD_HIJACK_LOG_ENABLE),true)
 PRODUCT_PACKAGES += \
 	hijack.log_dump
