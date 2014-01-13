@@ -26,9 +26,6 @@ PRODUCT_PACKAGES += \
 	hijack_boot_stop \
 	hijack-boot.zip
 
-PRODUCT_COPY_FILES += \
-	device/motorola/hijack/hijack-boot.zip:system/etc/hijack-boot.zip
-
 ifeq ($(BOARD_HIJACK_LOG_ENABLE),true)
 PRODUCT_PACKAGES += \
 	hijack.log_dump
@@ -40,4 +37,4 @@ endif
 $(call inherit-product-if-exists, vendor/motorola/common/common_hijack-vendor.mk)
 
 # Inherit from the non-small variant of this file
-$(call inherit-product, device/motorola/hijack/common.mk)
+$(call inherit-product, device/motorola/common/common.mk)
